@@ -1,48 +1,50 @@
-// function register() {
-//     // Coleta valores dos campos
-//     const nameInput = document.querySelector('#nome').value;
-//     const telInput = querySelector('#Tel').value;
-//     const cepInput = querySelector('#CEP').value;
-
-//     // Cria textnode com os valores dos campos
-//     const name = document.createTextNode(nameInput);
-//     const tel = document.createTextNode(telInput);
-//     const cep = document.createTextNode(cepInput);
-
-//     // Coleta id da lista
-//     const list = document.querySelector('#lista');
-
-//     // Define as constantes que criam o li e as divs da lista
-//     const createLi = document.createElement('li');
-//     const div_listContainer = document.createElement("div").classList.add('listContainer');
-//     const div_namePlaceholder = document.createElement("div").classList.add('namePlaceholder');
-//     const div_telPlaceholder = document.createElement("div").classList.add('telPlaceholder');
-//     const div_cepPlaceholder = document.createElement("div").classList.add('cepPlaceholder');
-
-//     // Executa a criação
-//     if(nameInput === ''){
-//         return;
-//     } else {
-
-//         div_namePlaceholder.appendChild(name);
-//         div_telPlaceholder.appendChild(tel);
-//         div_cepPlaceholder.appendChild(cep);
-
-//         let div_item = list.createLi;
-//         div_item.appendChild(div_namePlaceholder);
-
-//     }
-// }   
-
+// Chamada do botao register
 function register() {
+    // Declaracao dos elementos do form + lista
     let newRegister = document.querySelector('#button');
     let name_form = document.querySelector('#nome').value;
     let tel_form = document.querySelector('#Tel').value;
     let cep_form = document.querySelector('#CEP').value;
+    let list = document.querySelector('.lista')
     
+    // Objeto com os dados do contato
     let contact = {
         name: name_form,
         tel: tel_form,
         cep: cep_form,
     }
+
+    // Chamada da funcao de criar listas, passando o objeto contact com os dados do contato
+    let li = createLi(contact);
+    // Criando o li com as divs no HTML
+    list.appendChild(li);
+}
+
+// Funcao de criar listas. Recebe o objeto contact contendo dados do contato
+function createLi(contact) {
+    // Cria o li dentro do ul
+    var li = document.createElement('li');
+
+    // Criando div, adicionando class nome e colocando informacoes do objeto contact (name)
+    let divName = document.createElement('div');
+    divName.classList.add('name');
+    divName.innerHTML = contact.name;
+
+    // Criando div, adicionando class tel e colocando informacoes do objeto contact (tel)
+    let divTel = document.createElement('div');
+    divTel.classList.add('tel');
+    divTel.innerHTML = contact.tel;
+
+    // Criando div, adicionando class cep e colocando informacoes do objeto contact (cep)
+    let divCep = document.createElement('div');
+    divCep.classList.add('cep');
+    divCep.innerHTML = contact.cep;
+
+    // Colocando as divs dentro do li
+    li.appendChild(divName);
+    li.appendChild(divTel);
+    li.appendChild(divCep);
+
+    // Retornando li configurado com as divs para quem chamou
+    return li;
 }
