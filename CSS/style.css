@@ -1,0 +1,72 @@
+* {box-sizing: border-box; padding: 0; margin: 0;}
+
+:root {
+    font-size: 62.5%;
+}
+
+/* ::selection {
+    background: rgba(255, 10, 132, .8)
+} */
+
+form {
+    width: 15rem;
+    height: auto;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+}
+
+ul {
+    width: 45vw;
+    margin: auto;
+    list-style: none;
+}
+
+ul > .contactContainer {
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .7rem rgba(0,0,0,.5) ;
+    background: whitesmoke;
+}
+
+ul > .contactContainer > .name {
+    position: relative;
+    color: whitesmoke;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.3rem;
+    background: blue;
+}
+
+ul > .contactContainer > .name::before {
+    content: 'Nome:';
+    position: absolute;
+    top: 5%;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+ul > .contactContainer > .tel {
+    position: relative;
+    padding-top: 1.3rem;
+    padding-left: 1.3rem;
+}
+
+ul > .contactContainer > .tel::before {
+    content: 'Telefone:';
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+ul > .contactContainer > .cep {
+    position: relative;
+    padding: 1.3rem 0 1.3rem 1.3rem;
+}
+
+ul > .contactContainer > .cep::before {
+    content: 'CEP:';
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
