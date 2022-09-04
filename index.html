@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Lista de Contatos</title>
 </head>
 <body>
-    <form>
+    <form class="contactForm">
         <label for="Nome">Nome</label> <br>
         <input type="text" autocomplete="off" id="nome" name="Nome" placeholder="Nome" required>
         <br>
@@ -24,6 +25,11 @@
     </form>
 
     <ul id="lista">
+        <li class="contactContainer">
+                <div class="name"> Fernando </div>
+                <div class="tel"> (+55) 48 991310528 </div>
+                <div class="cep"> 88133-595 </div>
+        </li>
     </ul>
     <script src="./JS/RegEx-Mask.js"></script>
     <script src="./JS/listRegister.js"></script>  
