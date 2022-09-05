@@ -5,8 +5,13 @@ function register() {
     let name_form = document.querySelector('#nome').value;
     let tel_form = document.querySelector('#Tel').value;
     let cep_form = document.querySelector('#CEP').value;
-    let list = document.querySelector('.lista')
-    
+    let list = document.querySelector('#lista')
+    let formEvent = document.querySelector('#contactForm');
+
+    formEvent.addEventListener('submit', (event) => {
+        event.preventDefault();
+    })
+
     // Objeto com os dados do contato
     let contact = {
         name: name_form,
@@ -15,15 +20,18 @@ function register() {
     }
 
     // Chamada da funcao de criar listas, passando o objeto contact com os dados do contato
-    let li = createLi(contact);
+    if(contact.name != '' || contact.tel != ''){
+        var li = createLi(contact);
+    }
     // Criando o li com as divs no HTML
     list.appendChild(li);
 }
 
 // Funcao de criar listas. Recebe o objeto contact contendo dados do contato
 function createLi(contact) {
-    // Cria o li dentro do ul
-    var li = document.createElement('li');
+    // Cria o li dentro do ul e adicionando classe
+    let li = document.createElement('li');
+    li.classList.add('contactContainer');
 
     // Criando div, adicionando class nome e colocando informacoes do objeto contact (name)
     let divName = document.createElement('div');

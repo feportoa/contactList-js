@@ -15,17 +15,38 @@ form {
     font-size: 1.5rem;
 }
 
-ul {
-    width: 45vw;
-    margin: auto;
-    list-style: none;
+form > .formLabel {
+    font-weight: bold;
 }
 
+form > .formInput {
+    border: rgb(43, 43, 223, .5) solid 1px;
+    border-radius: .5rem;
+    padding: 0 .3rem 0 .3rem;
+    box-shadow: 0 0 .5rem rgba(36, 36, 36, 0.3);
+}
+
+ul {
+    padding: 3rem;
+    width: 45vw;
+    max-height: 70vh;
+    box-shadow: 0 0 1rem rgba(131, 131, 131, 0.3);
+    border-radius: 1rem;
+    margin: auto;
+    list-style: none;
+    overflow: scroll;
+}
+
+/* ul::-webkit-scrollbar {
+    height: 95%;
+} */
+
 ul > .contactContainer {
+    margin-bottom: 3.3rem;
     font-size: 1.7rem;
     border-radius: 1rem;
-    box-shadow: 0 0 .7rem rgba(0,0,0,.5) ;
-    background: whitesmoke;
+    box-shadow: 0 0 .7rem rgba(59, 59, 59, 0.3);
+    background: rgb(240, 240, 240);
 }
 
 ul > .contactContainer > .name {
@@ -33,7 +54,7 @@ ul > .contactContainer > .name {
     color: whitesmoke;
     border-radius: 1rem 1rem 0 0;
     padding: 1.3rem;
-    background: blue;
+    background: rgb(43, 43, 223);
 }
 
 ul > .contactContainer > .name::before {

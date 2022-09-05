@@ -8,20 +8,21 @@
     <title>Lista de Contatos</title>
 </head>
 <body>
-    <form class="contactForm">
-        <label for="Nome">Nome</label> <br>
-        <input type="text" autocomplete="off" id="nome" name="Nome" placeholder="Seu Jorge - Amiga da Minha Mulher" required>
+
+    <form id="contactForm">
+        <label for="Nome" class="formLabel">Nome</label> <br>
+        <input type="text" autocomplete="off" class="formInput" id="nome" name="Nome" placeholder="Seu Jorge - Amiga da Minha Mulher" required>
         <br>
 
-        <label for="Tel">Telefone</label> <br>
-        <input type="tel" autocomplete="off" name="Tel" id="Tel" placeholder="(+12) 34 56789-0123" maxlength="19" pattern="\(\+[0-9]{2}\)\-[0-9]{2}9\w{4}\-\w+" required>
+        <label for="Tel" class="formLabel">Telefone</label> <br>
+        <input type="tel" autocomplete="off" name="Tel" class="formInput" id="Tel" placeholder="(+12) 34 56789-0123" maxlength="19" pattern="\(\+[0-9]{2}\)\-[0-9]{2}9\w{4}\-\w+" required>
         <br>
 
-        <label for="CEP">CEP</label> <br>
-        <input type="text" autocomplete="off" name="CEP" id="CEP" placeholder="12345-678" maxlength="9" pattern="\d{5}-\d{3}">
+        <label for="CEP" class="formLabel">CEP</label> <br>
+        <input type="text" autocomplete="off" name="CEP" class="formInput" id="CEP" placeholder="12345-678" maxlength="9" pattern="\d{5}-\d{3}" required>
         <br>
 
-        <button id="button" onclick='register()' >Registrar</button>
+        <button id="button" onclick='register()'>Registrar</button>
     </form>
 
     <ul id="lista">
@@ -31,7 +32,9 @@
                 <div class="cep"> 00000-000 </div>
         </li>
     </ul>
+
     <script src="./JS/RegEx-Mask.js"></script>
     <script src="./JS/listRegister.js"></script>  
+
 </body>
 </html>
