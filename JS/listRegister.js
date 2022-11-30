@@ -1,4 +1,4 @@
-// Chamada do button (onclick="register()"
+// Chamada do button (onclick="register()")
 function register() {
     // Declaracao dos elementos do form + lista
     let newRegister = document.querySelector('#button');
