@@ -8,11 +8,11 @@ tel.addEventListener('keypress', () => {
         if(tel.value == '+') {
             
         }
-        tel.value = '(+';
-    } else if (telLength === 4) {
+        tel.value = '+';
+    } else if (telLength === 3) {
+        tel.value += ' (';
+    } else if (telLength === 7) {
         tel.value += ') ';
-    } else if (telLength === 8) {
-        tel.value += ' ';
     } else if (telLength === 14) {
         tel.value += '-';
     }
